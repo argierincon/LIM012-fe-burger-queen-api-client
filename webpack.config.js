@@ -13,8 +13,7 @@ const config = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/
@@ -29,14 +28,12 @@ const config = {
       },
       {
         test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png'
-            }
+        use: [{
+          loader: 'url-loader',
+          options: {
+            mimetype: 'image/png'
           }
-        ]
+        }]
       },
       {
         test: /\.svg$/,
@@ -58,6 +55,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: './public/index.html',
       appMountId: 'app',
       filename: 'index.html'
     }),
