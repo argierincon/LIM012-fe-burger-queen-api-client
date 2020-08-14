@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: poppins-semibold;
+}
+
+@font-face {
+  font-family: 'poppins-regular';
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-medium';
+  src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-semibold';
+  src: url(./fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-bold';
+  src: url(./fonts/Poppins-Bold.ttf);
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(./img/bg-burger-queen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.layout__top-shape {
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.layout__lower-shape {
+  width: 40vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bq-logo {
+  width: 48vw;
+  margin: 8vw 0;
+}
+
+.login > p {
+  margin-bottom: 4vh;
+  font-size: 18px;
+}
+
+.login__inputs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-input {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: -3px 2px 5px rgba(65, 65, 65, 0.2),
+    1px 2px 16px rgba(65, 65, 65, 0.2);
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  padding: 10px;
+  width: 80vw;
+}
+
+.custom-input > input {
+  background-color: transparent;
+  border: 0;
+  margin-left: 4vw;
+  max-width: 60vw;
+  color: #333333;
+}
+
+/* .custom-input > input:hover {
+  border: 1.5px solid #009688;
+  background: #009688;
+} */
+
+.custom-input__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  background: #ffffff;
+  box-shadow: 1px -1px 5px rgba(65, 65, 65, 0.2),
+    -1px 2px 5px rgba(65, 65, 65, 0.2);
+  border-radius: 20px;
+}
+
+.custom-input__circle > svg {
+  width: 25px;
+}
+
+.login__inputs-box > input {
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 55px;
+  width: 40vw;
+  height: 8vh;
+  font-size: 20px;
+  font-family: poppins-medium;
+  margin-top: 2vh;
+}
+
+@media (min-width: 768px) {
+  .layout__top-shape {
+    width: 32vw;
+  }
+
+  .layout__lower-shape {
+    width: 22vw;
+  }
+
+  .bq-logo {
+    width: 26vw;
+    /* margin: 4vh 0; */
+    margin: 0 0 4vh 0;
+  }
+
+  .login > p {
+    /* margin-bottom: 4vh; */
+    font-size: 22px;
+  }
+
+  .custom-input {
+    width: 52vw;
+    height: 8vh;
+    font-size: 21px;
+    border-radius: 40px;
+    margin-bottom: 4vh;
+  }
+
+  .custom-input > input {
+    margin-left: 2vw;
+  }
+
+  .login__inputs-box > input {
+    font-size: 24px;
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .layout__top-shape {
+    width: 28vw;
+  }
+
+  .bq-logo {
+    width: 20vw;
+  }
+
+  .login > p {
+    font-size: 2vw;
+  }
+
+  .custom-input {
+    width: 40vw;
+    height: 8vh;
+    font-size: 2vw;
+    border-radius: 100px;
+    padding: 1vw;
+  }
+
+  .custom-input > input {
+    width: 32vw;
+    margin-left: 1vw;
+  }
+
+  .custom-input__circle {
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 60px;
+  }
+
+  .custom-input__circle > svg {
+    width: 2.6vw;
+  }
+
+  .login__inputs-box > input {
+    font-size: 2vw;
+    width: 22vw;
+    border-radius: 70px;
+  }
+}
