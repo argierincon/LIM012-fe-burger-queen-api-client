@@ -66,14 +66,6 @@
   right: 0;
 }
 
-.layout__lower-shape {
-  width: 40vw;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  transform: rotate(90deg);
-}
-
 .container-login {
   display: flex;
   flex-direction: column;
@@ -115,13 +107,14 @@
   margin-bottom: 3vh;
   padding: 10px;
   width: 80vw;
+  font-size: 5vw;
 }
 
 .custom-input > input {
   background-color: transparent;
   border: 0;
   margin-left: 4vw;
-  max-width: 60vw;
+  width: 80%;
   color: #333333;
 }
 
@@ -152,9 +145,9 @@
   box-sizing: border-box;
   box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 55px;
-  width: 40vw;
-  height: 8vh;
-  font-size: 20px;
+  width: 50vw;
+  height: 7.5vh;
+  font-size: 5vw;
   font-family: poppins-medium;
   margin-top: 2vh;
 }
@@ -162,10 +155,6 @@
 @media (min-width: 768px) {
   .layout__top-shape {
     width: 32vw;
-  }
-
-  .layout__lower-shape {
-    width: 22vw;
   }
 
   .bq-logo {
@@ -181,7 +170,7 @@
 
   .custom-input {
     width: 52vw;
-    height: 8vh;
+    /* height: 8vh; */
     font-size: 21px;
     border-radius: 40px;
     margin-bottom: 4vh;
@@ -190,16 +179,22 @@
   .custom-input > input {
     margin-left: 2vw;
   }
+/* 
+  .custom-input__circle {
+    width: 45px;
+    height: 45px;
+  } */
 
   .login__inputs-box > input {
     font-size: 24px;
     width: 30vw;
+    max-height: 6.5vw;
   }
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .layout__top-shape {
-    width: 28vw;
+    max-width: 28vw;
   }
 
   .bq-logo {
@@ -224,8 +219,8 @@
   }
 
   .custom-input__circle {
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 60px;
   }
 
@@ -238,4 +233,4 @@
     width: 22vw;
     border-radius: 70px;
   }
-}
+} */
