@@ -81,6 +81,13 @@
   font-size: 4vw;
 }
 
+.layout > img {
+  position: absolute;
+  width: 16vw;
+  bottom: 2vh;
+  right: 2vw;
+}
+
 .btn-user-opc-container {
   z-index: 1;
   display: flex;
@@ -140,17 +147,23 @@
     width: 32vw;
   }
 
+  .layout > p {
+    margin-top: 0;
+    margin-bottom: 8vh;
+    font-size: 2vw;
+  }
+
+  .layout > img {
+    bottom: 3vh;
+    right: 3vw;
+    width: 10vw;
+  }
+
   .btn-user-opc-container {
     flex-direction: row;
     overflow: inherit;
     margin: 0;
     height: 65vh;
-  }
-
-  .layout > p {
-    margin-top: 0;
-    margin-bottom: 8vh;
-    font-size: 2vw;
   }
 
   .btn-user-opc-container {
@@ -172,6 +185,7 @@
   .btn-user-opc > p {
     max-width: 14vw;
     font-size: 2.5vw;
+    margin-right: 1vw;
   }
 
   .btn-user-opc > img {
