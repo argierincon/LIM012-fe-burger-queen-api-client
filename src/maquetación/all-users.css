@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: poppins-semibold;
+}
+
+@font-face {
+  font-family: 'poppins-regular';
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-medium';
+  src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-semibold';
+  src: url(./fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-bold';
+  src: url(./fonts/Poppins-Bold.ttf);
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(./img/bg-burger-queen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.layout__top-shape {
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.layout__logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 3.5vw 0 0 3.5vw;
+  width: 24vw;
+}
+
+.layout > p {
+  z-index: 1;
+  margin-top: 8vh;
+  font-size: 4vw;
+}
+
+.layout span {
+  position: absolute;
+  right: 9vw;
+  top: 6vh;
+  z-index: 1;
+  font-size: 3vw;
+  color: #333;
+}
+
+.layout__user-logged {
+  position: absolute;
+  right: 0;
+  top: 2vh;
+  width: 25vw;
+}
+
+.container-all-users-table {
+  z-index: 1;
+  margin: 4vh 0;
+}
+
+.all-users-table {
+  width: 90vw;
+  overflow: scroll;
+  border-radius: 25px;
+}
+
+.items-table-head {
+  display: flex;
+  align-items: center;
+  background-color: #009688;
+  width: 180vw;
+  height: 10vh;
+}
+
+.items-table-head img {
+  width: 18vw;
+}
+
+.center-margin-4vw {
+  text-align: center;
+  margin: 0 4vw;
+}
+
+.table-tittle-img {
+  width: 14vw;
+  text-align: center;
+  margin-left: 4vw;
+}  
+
+.table-tittle-cod-trab {
+  width: 14vw;
+}
+
+.table-tittle-email {
+  text-align: left;
+  width: 90vw;
+  margin: 0 4vw;
+}
+
+.info-table {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  width: 180vw;
+  padding: 3vw;
+}
+
+.info-table > img {
+  width: 12vw;
+}
+
+.info-table > p {
+  color: #333333;
+}
+
+.layout__btn-salir {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 55px;
+  width: 50vw;
+  height: 7.5vh;
+  font-size: 5vw;
+  font-family: poppins-medium;
+  margin-top: 1vh;
+}
+
+@media (min-width: 768px) {
+  .layout__logo {
+    width: 13.5vw;
+    margin: 2.5vw 0 0 2.5vw;
+  }
+
+  .layout__top-shape {
+    width: 32vw;
+  }
+
+  .layout > p {
+    margin-top: 0;
+    margin-bottom: 8vh;
+    font-size: 2vw;
+  }
+
+  .layout span {
+    right: 5.5vw;
+    top: 5.5vh;
+    font-size: 2vw;
+  }
+
+  .layout__user-logged {
+    right: 0;
+    top: 1vh;
+    width: 16vw;
+  }
+
+  .layout__btn-salir {
+    font-size: 2.5vw;
+    width: 20vw;
+    max-height: 6.5vw;
+  }
+}
