@@ -81,7 +81,23 @@
   font-size: 4vw;
 }
 
-.layout > img {
+.layout span {
+  position: absolute;
+  right: 9vw;
+  top: 6vh;
+  z-index: 1;
+  font-size: 3vw;
+  color: #333;
+}
+
+.layout__user-logged {
+  position: absolute;
+  right: 0;
+  top: 2vh;
+  width: 25vw;
+}
+
+.layout__user-settings {
   position: absolute;
   width: 16vw;
   bottom: 2vh;
@@ -153,7 +169,19 @@
     font-size: 2vw;
   }
 
-  .layout > img {
+  .layout span {
+    right: 5.5vw;
+    top: 5.5vh;
+    font-size: 2vw;
+  }
+
+  .layout__user-logged {
+    right: 0;
+    top: 1vh;
+    width: 16vw;
+  }
+
+  .layout__user-settings {
     bottom: 3vh;
     right: 3vw;
     width: 10vw;
