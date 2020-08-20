@@ -1,18 +1,13 @@
+import React from 'react';
+import './assets/styles/Global.sass';
+import Layout from './components/layout/Layout';
 
-import React from "react";
-import { hot } from 'react-hot-loader/root';
+const App = () => {
+  return (
+    <>
+      <Layout></Layout>
+    </>
+  );
+};
 
-class App extends React.Component {
-  render() {
-    const { name } = this.props;
-    return (
-      <>
-        <h1>
-          Hello {name}
-        </h1>
-      </>
-    );
-  }
-}
-
-export default hot(App);
+export default App;
