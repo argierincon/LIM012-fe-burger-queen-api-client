@@ -4,63 +4,68 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
+  entry: ['react-hot-loader/patch', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+        test: /\.s(c|a)ss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.png$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            mimetype: 'image/png'
-          }
-        }]
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              mimetype: 'image/png',
+            },
+          },
+        ],
       },
       {
-        test: /\.svg$/,
-        use: 'file-loader'
-      }
-    ]
+        test: /\.(svg|jpg|jpeg)$/,
+        use: 'file-loader',
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: [
-      '.js',
-      '.jsx'
-    ],
+    extensions: ['.js', '.jsx'],
     alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
       appMountId: 'app',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
-    new MiniCssExtractPlugin()
-  ]
+    new MiniCssExtractPlugin(),
+  ],
 };
 
 module.exports = config;
