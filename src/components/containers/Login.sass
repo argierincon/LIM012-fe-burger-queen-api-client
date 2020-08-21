@@ -1,0 +1,51 @@
+.container-login
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.login
+  z-index: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.bq-logo
+  width: 48vw
+  margin: 8vw 0
+
+.login > p
+  margin-bottom: 4vh
+  font-size: 18px
+
+.login__inputs-box
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.login__inputs-box > input
+  background-color: transparent
+  border: 1.5px solid #ffffff
+  box-sizing: border-box
+  box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 55px
+  width: 50vw
+  height: 7.5vh
+  font-size: 5vw
+  font-family: poppins-medium
+  margin-top: 2vh
+
+@media (min-width: 768px)
+  .bq-logo
+    width: 26vw
+    margin: 0 0 4vh 0
+
+  .login > p
+    font-size: 22px
+
+  .login__inputs-box > input
+    font-size: 2.5vw
+    width: 20vw
+    max-height: 6.5vw
+
