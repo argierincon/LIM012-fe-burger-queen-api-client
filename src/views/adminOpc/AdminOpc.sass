@@ -1,0 +1,31 @@
+.btn-user-opc-container
+  z-index: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 12vh
+  height: 65vh
+  overflow: scroll
+
+.btn-user-opc-container::-webkit-scrollbar
+  display: none
+
+.btn-user-opc__first-btn
+  margin-top: 2vh;
+
+@media (min-width: 768px)
+  .btn-user-opc-container
+    flex-direction: row
+    overflow: inherit
+    margin: 0
+    height: 65vh
+
+  .btn-user-opc-container
+    display: flex
+    align-items: center
+    margin-top: 10vh
+    // overflow: inherit
+
+  .btn-user-opc__first-btn
+    margin-top: 0
+    margin-right: 6vw
